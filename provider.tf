@@ -8,3 +8,11 @@ provider "azurerm" {
   tenant_id       = "5af85c72-b5b8-42e2-b4b8-325ad97c85cd"
 }
 
+terraform {
+  backend "azurerm" {
+    storage_account_name = "statefileaccount"
+    container_name       = "container1"
+    key                  = "dev.terraform.tfstate"
+    access_key = "vlTqOycCbAJrUbvApKhKxdb5DvHLqqoWDWnU5jnaAfPjCgS/Ze+DOo5qJFPANYI8s51OtkhCHpcwm1pvfbHCIA=="
+  }
+}
